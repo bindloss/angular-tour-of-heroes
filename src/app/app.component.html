@@ -1,4 +1,10 @@
 <h1>{{ title }}</h1>
 
-<app-heroes></app-heroes>
+<!-- Use routerLink instead of href - remember we want to build a SPA -->
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a> 
+</nav>
+<!-- by adding router outlet here we no longe need to import app-heroes component because we are already importing the path into router outlet -->
+<router-outlet></router-outlet>
 <app-messages></app-messages>
